@@ -80,20 +80,6 @@ result = rag.query("What are the key findings?")
 print(result['answer'])  # Includes spatial references
 ```
 
-## 🔍 What Makes This Special
-
-- **Spatial Awareness**: Unlike traditional RAG systems that lose location context, this system preserves and utilizes spatial information
-- **Source Traceability**: Every response can tell you exactly where information came from in the original document
-- **Advanced Parsing**: Landing AI ADE provides superior document understanding compared to basic text extraction
-- **Cost Optimization**: Smart caching prevents reprocessing the same documents
-
-## 📊 Supported Content Types
-
-- ✅ **Text**: Paragraphs, headings, lists
-- ✅ **Tables**: Structured data with spatial context
-- ✅ **Figures**: Charts, graphs, diagrams
-- ✅ **Marginalia**: Footnotes, annotations, side notes
-
 ## ⚙️ Configuration
 
 Key settings in `.env`:
