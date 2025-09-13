@@ -1,0 +1,45 @@
+# Core RAG dependencies
+openai>=1.40.0
+langchain>=0.2.0
+langchain-openai>=0.1.0
+langchain-community>=0.2.0
+
+# Document processing
+PyMuPDF>=1.23.0  # For PDF processing
+Pillow>=10.0.0   # For image processing
+python-docx>=1.1.0  # For Word documents
+
+# Vector database
+chromadb>=0.4.0
+
+# Embeddings and ML
+sentence-transformers>=2.7.0
+transformers>=4.35.0
+torch>=1.11.0,<2.1.0  # Compatible with sentence-transformers
+
+# Image analysis and multimodal
+# Note: clip-by-openai has torch version conflicts, using alternative
+# clip-by-openai>=1.0  # Disabled due to torch version conflicts
+opencv-python>=4.8.0
+ftfy>=6.1.1  # For CLIP text processing if needed
+
+# Web interface
+streamlit>=1.28.0
+gradio>=4.0.0
+
+# Utilities
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+pandas>=2.1.0
+numpy>=1.24.0
+requests>=2.31.0
+tqdm>=4.66.0
+
+# Landing AI for Agentic Document Extraction
+landingai>=0.3.0
+agentic-doc>=0.1.0  # Landing AI's ADE library
+
+# Development
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
