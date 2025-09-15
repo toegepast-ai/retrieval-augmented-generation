@@ -1,23 +1,22 @@
-# Ruimtelijk-Bewuste RAG met Landing AI ADE
+# RAG met Landing AI ADE
 
-Een geavanceerd Retrieval-Augmented Generation (RAG) systeem dat PDF-documenten verwerkt met **ruimtelijke intelligentie**. Gebruikt Landing AI's Agentic Document Engine (ADE) om niet alleen inhoud te extraheren, maar ook precieze locatie-informatie voor verbeterde bronverwijzing.
+Een geavanceerd Retrieval-Augmented Generation (RAG) systeem dat PDF-documenten verwerkt. Gebruikt Landing AI's Agentic Document Engine (ADE) om inhoud te extraheren en precieze locatie-informatie voor verbeterde bronverwijzing.
 
 ## Hoofdkenmerken
 
-- **Ruimtelijke Intelligentie**: Exacte paginaposities en begrenzingscoördinaten voor elk stuk inhoud
 - **Landing AI ADE Integratie**: Geavanceerde documentverwerking met chunk-type detectie (tekst, tabellen, figuren)
 - **Bronverwijzing**: Antwoorden bevatten precieze referenties naar originele documentlocaties
-- **JSON Export**: Complete ruimtelijke data export voor geavanceerde analyse
+- **JSON Export**: Complete data export voor geavanceerde analyse
 - **Streamlit Interface**: Interactieve webapplicatie voor documentverwerking en queries
 - **Kosteneffectief**: Slim caching systeem voorkomt dubbele verwerkingskosten
 
 ## Architectuur
 
 ```
-PDF Document → Landing AI ADE → Spatial Chunks → Vector Database → Location-Aware Responses
-     ↓              ↓               ↓              ↓                    ↓
-  Raw PDF    Advanced Parsing   Coordinates    Semantic Search    "Gevonden op pagina 2,
-                                & Metadata      & Retrieval        linkerbovenhoek"
+PDF Document → Landing AI ADE → Chunks → Vector Database → Enhanced Responses
+     ↓              ↓           ↓              ↓                    ↓
+  Raw PDF    Advanced Parsing  Content    Semantic Search    "Gevonden op pagina 2"
+                                & Metadata      & Retrieval        
 ```
 
 ## Snelstart
@@ -72,12 +71,12 @@ config = {
 
 rag = MultimodalRAG(config)
 
-# Process document with spatial intelligence
+# Process document
 rag.process_document('document.pdf', save_ade_json=True)
 
-# Query with location-aware responses
+# Query with enhanced responses
 result = rag.query("Wat zijn de belangrijkste bevindingen?")
-print(result['answer'])  # Includes spatial references
+print(result['answer'])  # Includes source references
 ```
 
 ## Configuratie
